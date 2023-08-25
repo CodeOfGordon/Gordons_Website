@@ -1,5 +1,10 @@
 .App {
     height: 368.625em;
+    min-width: 891.2px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .body {
@@ -10,9 +15,10 @@
     
 }
 
-.navbar-wrapper {
+#navbar-wrapper {
     background-color: #FAFCFF;
     width: 100%;
+    padding-top: 1%;
 }
 
 .navbar {
@@ -55,7 +61,16 @@ h1 {
     font-size: 4.5rem;
 }
 
-/* Home introduction */
+
+.info_block {
+    width: 90%;
+    margin-left: 3%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    padding: 2%;
+}
+
+/* --Home introduction-- */
 
 #home-introduction-wrapper {
     border: none;
@@ -91,6 +106,7 @@ h1 {
     margin-bottom: 2%;
 }
 
+/*Social medias*/
 .Social-medias {
     display: flex;
     margin-bottom: 0%;
@@ -107,7 +123,7 @@ h1 {
 }
 
 .resume-wrapper {
-    width: 20%;
+    width: 10rem;
     margin-left: 5%;
     padding-right: 1.5%;
     padding-left: 1%;
@@ -123,7 +139,7 @@ h1 {
     margin: 5%;
 }
 
-
+/*images*/
 .More_info2 {
     position: absolute;
     left: 69%;
@@ -151,15 +167,13 @@ h1 {
 .reflection {
     margin-top: 0;
     width: 100%;
+    margin-bottom: 2%;
 }
     
-/* About me */
+/* --About me-- */
 
 #about-me-wrapper {
-    width: 90%;
-    margin-top: 5%;
-    margin-left: 3.5%;
-    padding: 2%;
+    height: 27rem;
     background-color: #89A5C2;
 }
 
@@ -167,3 +181,21 @@ h1 {
     font-size: 1.5rem;
 }
 
+/* --Skills-- */
+
+#logos {
+    display: flex;
+    flex-direction: column;
+}
+
+.logos-block {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+
+/* --Experience-- */
+.caroussel_button {
+    border: 0;
+    background: transparent;
+}
