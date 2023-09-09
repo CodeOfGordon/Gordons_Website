@@ -1,13 +1,14 @@
-.App {
-    height: 368.625em;
-    min-width: 891.2px;
+#App {
+    /*height: 368.625em;*/
+    height: 200em;
+    min-width: 960px;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-.body {
+#body {
     align-items: center;
     
     display: flex;
@@ -21,7 +22,7 @@ html {
     padding-top: 1%;
 }
 
-.navbar {
+#navbar {
     z-index: 999;
     opacity: 100%;
     position: sticky;
@@ -38,19 +39,15 @@ html {
 a {
     color: black;
 }
-
 a:link {
     text-decoration: none;
 }
-
 a:visited {
     text-decoration: none;
 }
-
 a:hover {
     text-decoration: none;
 }
-
 a:active {
     text-decoration: none;
 }
@@ -67,7 +64,7 @@ h1 {
     margin-left: 3%;
     margin-top: 5%;
     margin-bottom: 0%;
-    padding: 2%;
+    margin: 0% 0% 10% 3%;
 }
 
 /* --Home introduction-- */
@@ -82,23 +79,23 @@ h1 {
     display: flex;
 }
 
-.author {
+#author {
     margin-right: 3%;
     height: 100%;
 }
 
-.info {
+#info {
     display: flex;
     flex-direction: column;
 }
 
-.text-wrapper {
+#text-wrapper {
     font-weight: 700;
     text-shadow: 0px 4px 4px #00000040;
     margin-bottom: 0%;
 }
 
-.subtext-wrapper {
+#subtext-wrapper {
     color: #293f56;
     font-family: "Antic Slab-Regular", Helvetica;
     font-size: 1.8rem;
@@ -107,22 +104,22 @@ h1 {
 }
 
 /*Social medias*/
-.Social-medias {
+#Social-medias {
     display: flex;
     margin-bottom: 0%;
 }
 
-.linkedin-symbole {
+#linkedin-symbole {
     width: 70%;
     margin: 0%;
     padding: 0%;
 }
 
-.github-invertocat { 
+#github-invertocat { 
     width: 120%;
 }
 
-.resume-wrapper {
+#resume-wrapper {
     width: 10rem;
     margin-left: 5%;
     padding-right: 1.5%;
@@ -134,13 +131,13 @@ h1 {
     align-items: center;
 }
 
-.resume { 
+#resume { 
     font-size: 2.5rem;
     margin: 5%;
 }
 
 /*images*/
-.More_info2 {
+#More_info2 {
     position: absolute;
     left: 69%;
     top: 72%;
@@ -149,7 +146,7 @@ h1 {
     height: 5%;
 }
 
-.More_info2:hover {
+#More_info2:hover {
     transition: 0.3s;
     opacity: 100%;
 }
@@ -159,21 +156,26 @@ h1 {
     width: auto;
 }
 
-.city {
+#city-wrapper {
+    margin-bottom: 5%;
     width: 100%;
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-.reflection {
-    margin-top: 0;
-    width: 100%;
-    margin-bottom: 2%;
+#city {
+    width: inherit;
+}
+
+#reflection {
+    width: inherit;
 }
     
 /* --About me-- */
 
 #about-me-wrapper {
     height: 27rem;
+    padding: 1% 2% 1% 2%;
     background-color: #89A5C2;
 }
 
@@ -186,16 +188,79 @@ h1 {
 #logos {
     display: flex;
     flex-direction: column;
+    width:auto;
 }
 
 .logos-block {
     display: flex;
-    gap: 5%;
+    gap: 10%;
     align-items: center;
 }
 
 /* --Experience-- */
-.caroussel_button {
-    border: 0;
-    background: transparent;
+
+#caroussel {
+    text-align: center;
+    margin: 0%;
 }
+
+#caroussel ul {
+    height: 40rem;
+    padding: 0%;
+    display: inline-block;
+}
+
+.caroussel_button {
+    background: transparent;
+    border: 0;
+    height: inherit;
+    position: absolute;
+    z-index: 997;
+    opacity: 0%;
+}
+.caroussel_button:hover {
+    opacity: 100%;
+    transition: .5s;
+}
+.caroussel_button img {
+    height: inherit;
+    cursor: pointer;
+}
+#left_arrow {
+    float: left;
+    left: 2.7rem;
+}
+#right_arrow {
+    float: right;
+    right: 6.4rem;
+}
+
+#caroussel_content {
+    background-color: #D0DBE7;
+    width: 85rem;
+    height: 100%;
+    border-radius: 5%;
+    display: flex;
+}
+#caroussel_content img {
+    padding: 2%;
+    height: 80%;
+    width: 50%;
+    border-radius: 5%;
+}
+
+#caroussel_text {
+    padding: 0% 2% 0% 2%;
+}
+#caroussel_text h3 {
+    font-family: "Anybody-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 3rem;
+}
+#caroussel_text p {
+    color: #293f56;
+    font-family: "Antic Slab-Regular", Helvetica;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
