@@ -1,7 +1,7 @@
 {
   "name": "gordons_website",
   "version": "0.1.0",
-  "homepage": "https://codeofgordon.github.io/Gordons_Website/",
+  "homepage": "https://codeofgordon.github.io/Gordons_Website",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

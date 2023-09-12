@@ -19,6 +19,7 @@ import python from './images/python.png';
 import travel from './images/travel_therapy.png';
 import pokemon from './images/pokemon_showdown.png';
 import wallpaper from './images/wallpaper_playlist.png';
+import SQL from './images/sql.png';
 
 function App() {
   const images_ = [travel, pokemon, wallpaper];
@@ -96,9 +97,10 @@ function App() {
             img4={javascript} img4alt={"javascript"} />
           <br/>
           <Logos_block 
-            img1={react} img5alt={"react"}
-            img2={tailwind} img1alt={"tailwind"} 
-            img3={python} img2alt={"python"}/>
+            img1={react} img1alt={"react"}
+            img2={tailwind} img2alt={"tailwind"} 
+            img3={python} img3alt={"python"}
+            img4={SQL} img4alt={"SQL"}/>
         </div>
       </div>
 
