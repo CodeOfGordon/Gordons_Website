@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Gordons_Website/static/css/main.6dc39a67.css",
-    "main.js": "/Gordons_Website/static/js/main.5e0d2b14.js",
+    "main.css": "/Gordons_Website/static/css/main.22d58380.css",
+    "main.js": "/Gordons_Website/static/js/main.f21e4877.js",
     "static/js/787.4b5d45e6.chunk.js": "/Gordons_Website/static/js/787.4b5d45e6.chunk.js",
     "static/media/Reflection.png": "/Gordons_Website/static/media/Reflection.9a115169c79a55b6d71e.png",
     "static/media/travel_therapy.png": "/Gordons_Website/static/media/travel_therapy.2e9acf7c767810598761.png",
@@ -11,12 +11,12 @@
     "static/media/react.png": "/Gordons_Website/static/media/react.e774f941455224488575.png",
     "static/media/City.png": "/Gordons_Website/static/media/City.63f5907c413139d76be8.png",
     "index.html": "/Gordons_Website/index.html",
-    "main.6dc39a67.css.map": "/Gordons_Website/static/css/main.6dc39a67.css.map",
-    "main.5e0d2b14.js.map": "/Gordons_Website/static/js/main.5e0d2b14.js.map",
+    "main.22d58380.css.map": "/Gordons_Website/static/css/main.22d58380.css.map",
+    "main.f21e4877.js.map": "/Gordons_Website/static/js/main.f21e4877.js.map",
     "787.4b5d45e6.chunk.js.map": "/Gordons_Website/static/js/787.4b5d45e6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6dc39a67.css",
-    "static/js/main.5e0d2b14.js"
+    "static/css/main.22d58380.css",
+    "static/js/main.f21e4877.js"
   ]
 }
