@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import './App.css';
-import Logos_block from './components/Logos_block.js';
-import Caroussel_block from './components/Caroussel_block';
+import LogosBlock from './components/LogosBlock.js';
+import CarousselBlock from './components/CarousselBlock';
 //import React, { useState } from 'react';
 import city from './images/City.png';
 import reflection from './images/Reflection.png';
 import author from './images/Author 1.png';
 import linkedin from './images/LinkedIn-Symbole 1.png';
 import github from './images/GitHub_Invertocat_Logo 1.png';
-import info_extra from './images/More-info2.png';
+import infoExtra from './images/More-info2.png';
 import git from './images/git.png';
 import bash from './images/bash.png';
 import C from './images/C.png';
@@ -60,7 +60,7 @@ function App() {
             <a target="noreferrer" href="https://github.com/CodeOfGordon?tab=repositories">
               <img id="github-invertocat" alt="Github invertocat" src={github} />
             </a>
-            <a id="resume-wrapper" target="noreferrer" href="https://drive.google.com/file/d/18oq8aBr6L-bAwDpONeU_5ohLOpXfCApU/view?usp=sharing">
+            <a id="resume-wrapper" target="noreferrer" href="https://drive.google.com/file/d/1AZuH0TtcJ1zeRJwlqBP9MoFbTMO1GisN/view?usp=sharing">
               <h1 id="resume">Resume</h1>
             </a>
           </div>
@@ -68,35 +68,35 @@ function App() {
       </div>
       
       <div id="city-wrapper">
-        <a id="More_info2" target="noreferrer" href="https://youindanang.com/dragon-bridge-da-nang-vietnam/">
-          <img id="info2_icon" alt="Extra info" src={info_extra}/>
+        <a id="More-info2" target="noreferrer" href="https://youindanang.com/dragon-bridge-da-nang-vietnam/">
+          <img id="info2-icon" alt="Extra info" src={infoExtra}/>
         </a>
         <img id="city" alt="City" src={city} />
         <img id="reflection" alt="Reflection of city" src={reflection} />
       </div>
       
-      <div id="about-me-wrapper" className="info_block">
+      <div id="about-me-wrapper" className="info-block">
         <h1>About me</h1>
         <p id="about-me-text">
           I’m student studying for a Bachelors Degree of Arts in Math Economics, 
-          and I am planning to minor in computing considering my interest in tech, 
-          and how I hope to find a way to marry the two topics someday. 
+          and I am planning to minor in computing considering my interest in tech. 
+          I hope to apply my skills of either field, or maybe even integrate the two topics in some way! 
           <br/><br/>
           There are many things I have learned, yet to learn, and things that I will want 
-          to learn in the future.
+          to learn in the future; and I hope I work towards these goals in the workplace!
         </p>
       </div>
 
-      <div id="skills-wrapper" className="info_block">
+      <div id="skills-wrapper" className="info-block">
         <h1>Skills</h1>
         <div id="logos">
-          <Logos_block 
+          <LogosBlock 
             img1={git} img1alt={"git"} 
             img2={bash} img2alt={"bash"} 
             img3={C} img3alt={"C"} 
             img4={javascript} img4alt={"javascript"} />
           <br/>
-          <Logos_block 
+          <LogosBlock 
             img1={react} img1alt={"react"}
             img2={tailwind} img2alt={"tailwind"} 
             img3={python} img3alt={"python"}
@@ -104,10 +104,10 @@ function App() {
         </div>
       </div>
 
-      <div id="experience-wrapper" className="info_block">
+      <div id="experience-wrapper" className="info-block">
         <h1>Experience</h1>
         <div id="caroussel">
-          <Caroussel_block images={images_} altr={headers} titles={headers} paragraphs={texts}/>
+          <CarousselBlock images={images_} altr={headers} titles={headers} paragraphs={texts}/>
         </div>
       </div>
       </body>

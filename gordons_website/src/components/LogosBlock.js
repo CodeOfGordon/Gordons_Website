@@ -1,4 +1,4 @@
-export default function Logos_block ({img1, img1alt, img2, img2alt, img3, img3alt,
+export default function LogosBlock ({img1, img1alt, img2, img2alt, img3, img3alt,
  img4, img4alt}) {
     return(
         <span className="logos-block">
