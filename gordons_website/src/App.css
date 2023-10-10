@@ -1,6 +1,6 @@
 #App {
     /*height: 368.625em;*/
-    height: 200em;
+    height: 275em;
     min-width: 960px;
 }
 
@@ -65,6 +65,10 @@ h1 {
     margin-top: 5%;
     margin-bottom: 0%;
     margin: 0% 0% 10% 3%;
+}
+
+.basic-text {
+    font-size: 1.5rem;
 }
 
 /* --Home introduction-- */
@@ -179,10 +183,6 @@ h1 {
     background-color: #89A5C2;
 }
 
-#about-me-text {
-    font-size: 1.5rem;
-}
-
 /* --Skills-- */
 
 #logos {
@@ -258,9 +258,18 @@ h1 {
     font-size: 3rem;
 }
 #caroussel-text p {
+    padding: 0% 2% 0% 2%;
     color: #293f56;
     font-family: "Antic Slab-Regular", Helvetica;
     font-size: 2rem;
     font-weight: 400;
 }
 
+/* Contact form */
+
+#form-wrapper {
+    height: 50em;
+    padding: 1% 2% 1% 2%;
+    background-color: #89A5C2;
+    border-radius: 1em;
+}

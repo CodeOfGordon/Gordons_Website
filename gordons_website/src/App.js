@@ -77,7 +77,7 @@ function App() {
       
       <div id="about-me-wrapper" className="info-block">
         <h1>About me</h1>
-        <p id="about-me-text">
+        <p className='basic-text'>
           I’m student studying for a Bachelors Degree of Arts in Math Economics, 
           and I am planning to minor in computing considering my interest in tech. 
           I hope to apply my skills of either field, or maybe even integrate the two topics in some way! 
@@ -109,6 +109,16 @@ function App() {
         <div id="caroussel">
           <CarousselBlock images={images_} altr={headers} titles={headers} paragraphs={texts}/>
         </div>
+      </div>
+
+      <div id="form-wrapper" className="info-block">
+        <h1>Contact</h1>
+        <p className='basic-text'>
+          Sign up here to get sent monthly cat pictures to your email inbox
+        </p>
+        <form id='email'>
+          
+        </form>
       </div>
       </body>
     </div>

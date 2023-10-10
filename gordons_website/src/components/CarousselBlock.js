@@ -7,15 +7,19 @@ export default function CarousselBlock ({images, altr, titles, paragraphs}) {
     const CarouselTxt = ({paragraphs})
     const [currIndex, setCurrIndex] = useState(0);
     const slideLeft = () => {
-        setCurrIndex((prevIndex) =>
-        prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
-        );
+        if (currIndex-1 < 0) {
+            setCurrIndex(images.length-1);
+        } else {
+            setCurrIndex(currIndex-1);
+        }
     };
 
     const slideRight = () => {
-        setCurrIndex((prevIndex) =>
-            prevIndex + 1 === images.length ? 0 : prevIndex + 1
-        );
+        if (currIndex+1 === images.length) {
+            setCurrIndex(0);
+        } else {
+            setCurrIndex(currIndex+1);
+        }
     };
     return(
         <ul>
