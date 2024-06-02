@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import LogosBlock from './components/LogosBlock.js';
-import CarousselBlock from './components/CarousselBlock';
+import LogosBlock from './components/LogosBlock.jsx';
+import CarousselBlock from './components/CarousselBlock.jsx';
 //import React, { useState } from 'react';
 import city from './images/City.png';
 import reflection from './images/Reflection.png';
