@@ -1,25 +1,9 @@
-import { useState } from 'react';
 import './App.css';
 import LogosBlock from './components/LogosBlock.jsx';
 import CarousselBlock from './components/CarousselBlock.jsx';
-//import React, { useState } from 'react';
-import city from './images/City.png';
-import reflection from './images/Reflection.png';
-import author from './images/Author 1.png';
-import linkedin from './images/LinkedIn-Symbole 1.png';
-import github from './images/GitHub_Invertocat_Logo 1.png';
-import infoExtra from './images/More-info2.png';
-import git from './images/git.png';
-import bash from './images/bash.png';
-import C from './images/C.png';
-import javascript from './images/javascript.png';
-import react from './images/react.png';
-import tailwind from './images/tailwind.png';
-import python from './images/python.png';
-import travel from './images/travel_therapy.png';
-import pokemon from './images/pokemon_showdown.png';
-import wallpaper from './images/wallpaper_playlist.png';
-import SQL from './images/sql.png';
+import travel from './assets/travel_therapy.png';
+import pokemon from './assets/pokemon_showdown.png';
+import wallpaper from './assets/wallpaper_playlist.png';
 
 function App() {
   const images_ = [travel, pokemon, wallpaper];
@@ -49,16 +33,16 @@ function App() {
       </span>
       <body>
       <div id="home-introduction-wrapper">
-        <img id="author" alt="Author" src={author} />
+        <img id="author" alt="Author" src='/Author 1.png' />
         <div id="info">
           <h1 id="text-wrapper">Hi, I’m Gordon Huynh</h1>
           <h1 id="subtext-wrapper">I am a student at the University of Waterloo with a passion for learning</h1>
           <div id="Social-medias">
             <a target="noreferrer" href="https://www.linkedin.com/in/gordon-huynh-02a5571b3/">
-              <img id="linkedin-symbole" alt="Linkedin symbole" src={linkedin} />
+              <img id="linkedin-symbole" alt="Linkedin symbole" src='/LinkedIn-Symbole 1.png' />
             </a>
             <a target="noreferrer" href="https://github.com/CodeOfGordon?tab=repositories">
-              <img id="github-invertocat" alt="Github invertocat" src={github} />
+              <img id="github-invertocat" alt="Github invertocat" src='/GitHub_Invertocat_Logo 1.png' />
             </a>
             <a id="resume-wrapper" target="noreferrer" href="https://drive.google.com/file/d/1AZuH0TtcJ1zeRJwlqBP9MoFbTMO1GisN/view?usp=sharing">
               <h1 id="resume">Resume</h1>
@@ -69,10 +53,10 @@ function App() {
       
       <div id="city-wrapper">
         <a id="More-info2" target="noreferrer" href="https://youindanang.com/dragon-bridge-da-nang-vietnam/">
-          <img id="info2-icon" alt="Extra info" src={infoExtra}/>
+          <img id="info2-icon" alt="Extra info" src='/More-info2.png'/>
         </a>
-        <img id="city" alt="City" src={city} />
-        <img id="reflection" alt="Reflection of city" src={reflection} />
+        <img id="city" alt="City" src="/City.png" />
+        <img id="reflection" alt="Reflection of city" src='/Reflection.png' />
       </div>
       
       <div id="about-me-wrapper" className="info-block">
@@ -91,16 +75,16 @@ function App() {
         <h1>Skills</h1>
         <div id="logos">
           <LogosBlock 
-            img1={git} img1alt={"git"} 
-            img2={bash} img2alt={"bash"} 
-            img3={C} img3alt={"C"} 
-            img4={javascript} img4alt={"javascript"} />
+            img1={'/git.png'} img1alt={"git"} 
+            img2={'/bash.png'} img2alt={"bash"} 
+            img3={'/C.png'} img3alt={"C"} 
+            img4={'/javascript.png'} img4alt={"javascript"} />
           <br/>
           <LogosBlock 
-            img1={react} img1alt={"react"}
-            img2={tailwind} img2alt={"tailwind"} 
-            img3={python} img3alt={"python"}
-            img4={SQL} img4alt={"SQL"}/>
+            img1={'/react.png'} img1alt={"react"}
+            img2={'/tailwind.png'} img2alt={"tailwind"} 
+            img3={'/python.png'} img3alt={"python"}
+            img4={'/sql.png'} img4alt={"SQL"}/>
         </div>
       </div>
 

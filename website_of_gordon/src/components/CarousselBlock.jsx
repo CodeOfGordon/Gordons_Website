@@ -1,6 +1,6 @@
 import { useState } from "react";
-import leftArrow from '../images/Left Arrow.png'
-import rightArrow from '../images/Right Arrow.png';
+import leftArrow from '../assets/Left Arrow.png'
+import rightArrow from '../assets/Right Arrow.png';
 
 export default function CarousselBlock ({images, altr, titles, paragraphs}) {
     const Carousel = ({images});
