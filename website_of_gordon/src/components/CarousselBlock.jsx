@@ -22,12 +22,9 @@ export default function CarousselBlock ({images, altr, titles, paragraphs}) {
         }
     };
     return(
-        <ul>
+        <div id="caroussel">
             <button className="caroussel-button" id="left-arrow" onClick={slideLeft}>
                 <img className="caroussel-button-img" src={leftArrow} alt="left arrow of caroussel"/>
-            </button>
-            <button className="caroussel-button" id="right-arrow" onClick={slideRight}>
-                <img src={rightArrow} alt="right arrow of caroussel"/>
             </button>
             <div id="caroussel-content">
                 <img key={currIndex} src={images[currIndex]} alt={altr}/>
@@ -36,7 +33,9 @@ export default function CarousselBlock ({images, altr, titles, paragraphs}) {
                     <p>{paragraphs[currIndex]}</p>
                 </div>
             </div>
-            
-        </ul>
+            <button className="caroussel-button" id="right-arrow" onClick={slideRight}>
+                <img src={rightArrow} alt="right arrow of caroussel"/>
+            </button>
+        </div>
     );
 }

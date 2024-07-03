@@ -25,10 +25,10 @@ function App() {
       
       <span id="navbar-wrapper">
         <ul id="navbar">
-          <a href="#navbar-wrapper">Home</a>
-          <a href="#about-me-wrapper">About me</a>
-          <a href="#skills-wrapper">Skills</a>
-          <a href="#experience-wrapper">Experience</a>
+          <li><a href="#navbar-wrapper">Home</a></li>
+          <li><a href="#about-me-wrapper">About me</a></li>
+          <li><a href="#skills-wrapper">Skills</a></li>
+          <li><a href="#experience-wrapper">Experience</a></li>
         </ul>
       </span>
       <body>
@@ -63,8 +63,7 @@ function App() {
         <h1>About me</h1>
         <p className='basic-text'>
           I’m student studying for a Bachelors Degree of Arts in Math Economics, 
-          and I am planning to minor in computing considering my interest in tech. 
-          I hope to apply my skills of either field, or maybe even integrate the two topics in some way! 
+          and I am planning to minor in computing considering my interest in tech! 
           <br/><br/>
           There are many things I have learned, yet to learn, and things that I will want 
           to learn in the future; and I hope I work towards these goals in the workplace!
@@ -90,20 +89,18 @@ function App() {
 
       <div id="experience-wrapper" className="info-block">
         <h1>Experience</h1>
-        <div id="caroussel">
-          <CarousselBlock images={images_} altr={headers} titles={headers} paragraphs={texts}/>
-        </div>
+        <CarousselBlock images={images_} altr={headers} titles={headers} paragraphs={texts}/>
       </div>
 
-      <div id="form-wrapper" className="info-block">
-        <h1>Contact</h1>
+      {/* <div id="form-wrapper" className="info-block">
+        <h1>Under construction</h1>
         <p className='basic-text'>
-          Sign up here to get sent monthly cat pictures to your email inbox
+          
         </p>
         <form id='email'>
           
         </form>
-      </div>
+      </div> */}
       </body>
     </div>
   );
