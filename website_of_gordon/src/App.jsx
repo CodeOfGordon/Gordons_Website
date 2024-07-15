@@ -84,6 +84,10 @@ function App() {
             img2={'/tailwind.png'} img2alt={"tailwind"} 
             img3={'/python.png'} img3alt={"python"}
             img4={'/sql.png'} img4alt={"SQL"}/>
+          <br/>
+          <LogosBlock 
+            img1={'/c++.png'} img1alt={"c++"}
+            img2={'/qt.png'} img2alt={"qt"}/>
         </div>
       </div>
 
