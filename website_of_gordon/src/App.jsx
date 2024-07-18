@@ -6,17 +6,20 @@ import pokemon from './assets/pokemon_showdown.png';
 import wallpaper from './assets/wallpaper_playlist.png';
 
 function App() {
-  const images_ = [travel, pokemon, wallpaper];
-  const headers = [
-    "Travel Therapy Discord Bot",
-    "Pokemon Showdown Demo",
-    "Wallpaper Engine Playlist Playlist"
-  ]
-  const texts = [
-    "We created a Discord bot using Python, the Co:here API, and Discord API. This bot uses AI to suggest places in Toronto to calm down depending on the input it receives.",
-    "We created a demo UI for a pokemon showdown game with randomized pokemon and movesets. This was created using Python and Tkinter.",
-    "I created this to help others create a playlist of their playlists! I achieved this using Wallpaper Engine’s commands, batch, vbs, and understanding task manager."
-  ];
+  const carrouselInfo = {
+    images: [travel, pokemon, wallpaper],
+    altr: ["Travel Therapy Discord Bot", "Pokemon Showdown Demo", "Wallpaper Engine Playlist Playlist"],
+    titles: ["Travel Therapy Discord Bot", "Pokemon Showdown Demo", "Wallpaper Engine Playlist Playlist"],
+    paragraphs: [
+      "We created a Discord bot using Python, the Co:here API, and Discord API. This bot uses AI to suggest places in Toronto to calm down depending on the input it receives.",
+      "We created a demo UI for a pokemon showdown game with randomized pokemon and movesets. This was created using Python and Tkinter.",
+      "I created this to help others create a playlist of their playlists! I achieved this using Wallpaper Engine’s commands, batch, vbs, and understanding task manager."
+    ],
+    links: ['https://github.com/alexszokolay/Uoft-ECKS',
+      'https://github.com/CodeOfGordon/Pokemon-battle-simulator',
+      'https://github.com/CodeOfGordon/Wallpaper-Engine-Playlist-Playlist'
+    ]
+  }
   
   
 
@@ -93,7 +96,13 @@ function App() {
 
       <div id="experience-wrapper" className="info-block">
         <h1>Experience</h1>
-        <CarousselBlock images={images_} altr={headers} titles={headers} paragraphs={texts}/>
+        <CarousselBlock 
+          images={carrouselInfo.images} 
+          altr={carrouselInfo.altr} 
+          titles={carrouselInfo.titles} 
+          paragraphs={carrouselInfo.paragraphs}
+          links={carrouselInfo.links}
+        />
       </div>
 
       {/* <div id="form-wrapper" className="info-block">

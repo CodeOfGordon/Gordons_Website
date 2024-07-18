@@ -2,9 +2,7 @@ import { useState } from "react";
 import leftArrow from '../assets/Left Arrow.png'
 import rightArrow from '../assets/Right Arrow.png';
 
-export default function CarousselBlock ({images, altr, titles, paragraphs}) {
-    const Carousel = ({images});
-    const CarouselTxt = ({paragraphs})
+export default function CarousselBlock ({images, altr, titles, paragraphs, links}) {
     const [currIndex, setCurrIndex] = useState(0);
     const [isFading, setIsFading] = useState(false);
 
@@ -37,7 +35,9 @@ export default function CarousselBlock ({images, altr, titles, paragraphs}) {
                 <img src={leftArrow} alt="left arrow of caroussel"/>
             </button>
             <div id="caroussel-content" className={isFading ? 'fading' : ''}>
-                <img key={currIndex} src={images[currIndex]} alt={altr}/>
+                <a href={links[currIndex]}>
+                    <img key={currIndex} src={images[currIndex]} alt={altr[currIndex]}/>
+                </a>
                 <div id="caroussel-text">
                     <h3>{titles[currIndex]}</h3>
                     <p>{paragraphs[currIndex]}</p>

@@ -231,9 +231,12 @@ h1 {
 .fading {
     opacity: 0;
 }
-#caroussel-content img {
-    padding: 2%;
+#caroussel-content a {
+    display: contents;
+}
+#caroussel-content a img {
     max-width: 50%;
+    padding: 2%;
     object-fit: contain;
     border-radius: 5%;
     transition: opacity 0.5s ease-in-out;
