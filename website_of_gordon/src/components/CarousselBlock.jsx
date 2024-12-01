@@ -1,6 +1,4 @@
 import { useState } from "react";
-import leftArrow from '../assets/Left Arrow.png'
-import rightArrow from '../assets/Right Arrow.png';
 
 export default function CarousselBlock ({images, altr, titles, paragraphs, links}) {
     const [currIndex, setCurrIndex] = useState(0);
@@ -32,7 +30,7 @@ export default function CarousselBlock ({images, altr, titles, paragraphs, links
     return(
         <div id="caroussel">
             <button className="caroussel-button" id="left-arrow" onClick={slideLeft}>
-                <img src={leftArrow} alt="left arrow of caroussel"/>
+                <img src={'/caroussel/Left Arrow.png'} alt="left arrow of caroussel"/>
             </button>
             <div id="caroussel-content" className={isFading ? 'fading' : ''}>
                 <a href={links[currIndex]}>
@@ -44,7 +42,7 @@ export default function CarousselBlock ({images, altr, titles, paragraphs, links
                 </div>
             </div>
             <button className="caroussel-button" id="right-arrow" onClick={slideRight}>
-                <img src={rightArrow} alt="right arrow of caroussel"/>
+                <img src={'/caroussel/Right Arrow.png'} alt="right arrow of caroussel"/>
             </button>
         </div>
     );

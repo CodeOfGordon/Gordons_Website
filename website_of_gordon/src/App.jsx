@@ -1,13 +1,10 @@
 import './App.css';
 import LogosBlock from './components/LogosBlock.jsx';
 import CarousselBlock from './components/CarousselBlock.jsx';
-import travel from './assets/travel_therapy.png';
-import pokemon from './assets/pokemon_showdown.png';
-import wallpaper from './assets/wallpaper_playlist.png';
 
 function App() {
   const carrouselInfo = {
-    images: [travel, pokemon, wallpaper],
+    images: ['/public/caroussel/travel_therapy.png', '/public/caroussel/pokemon_showdown.png', '/public/caroussel/wallpaper_playlist.png'],
     altr: ["Travel Therapy Discord Bot", "Pokemon Showdown Demo", "Wallpaper Engine Playlist Playlist"],
     titles: ["Travel Therapy Discord Bot", "Pokemon Showdown Demo", "Wallpaper Engine Playlist Playlist"],
     paragraphs: [
@@ -36,16 +33,16 @@ function App() {
       </span>
       <body>
       <div id="home-introduction-wrapper">
-        <img id="author" alt="Author" src='/Author 1.png' />
+        <img id="author" alt="Author" src='/bio/Author 1.png' />
         <div id="info">
           <h1 id="text-wrapper">Hi, I’m Gordon Huynh</h1>
           <h1 id="subtext-wrapper">I am a student at the University of Waterloo with a passion for learning</h1>
           <div id="Social-medias">
             <a target="noreferrer" href="https://www.linkedin.com/in/gordon-huynh-02a5571b3/">
-              <img id="linkedin-symbole" alt="Linkedin symbole" src='/LinkedIn-Symbole 1.png' />
+              <img id="linkedin-symbole" alt="Linkedin symbole" src='/bio/LinkedIn-Symbole 1.png' />
             </a>
             <a target="noreferrer" href="https://github.com/CodeOfGordon?tab=repositories">
-              <img id="github-invertocat" alt="Github invertocat" src='/GitHub_Invertocat_Logo 1.png' />
+              <img id="github-invertocat" alt="Github invertocat" src='/bio/GitHub_Invertocat_Logo 1.png' />
             </a>
             <a id="resume-wrapper" target="noreferrer" href="https://drive.google.com/file/d/1AZuH0TtcJ1zeRJwlqBP9MoFbTMO1GisN/view?usp=sharing">
               <h1 id="resume">Resume</h1>
@@ -77,20 +74,20 @@ function App() {
         <h1>Skills</h1>
         <div id="logos">
           <LogosBlock 
-            img1={'/git.png'} img1alt={"git"} 
-            img2={'/bash.png'} img2alt={"bash"} 
-            img3={'/C.png'} img3alt={"C"} 
-            img4={'/javascript.png'} img4alt={"javascript"} />
+            img1={'/skills/git.png'} img1alt={"git"} 
+            img2={'/skills/bash.png'} img2alt={"bash"} 
+            img3={'/skills/C.png'} img3alt={"C"} 
+            img4={'/skills/javascript.png'} img4alt={"javascript"} />
           <br/>
           <LogosBlock 
-            img1={'/react.png'} img1alt={"react"}
-            img2={'/tailwind.png'} img2alt={"tailwind"} 
-            img3={'/python.png'} img3alt={"python"}
-            img4={'/sql.png'} img4alt={"SQL"}/>
+            img1={'/skills/react.png'} img1alt={"react"}
+            img2={'/skills/tailwind.png'} img2alt={"tailwind"} 
+            img3={'/skills/python.png'} img3alt={"python"}
+            img4={'/skills/sql.png'} img4alt={"SQL"}/>
           <br/>
           <LogosBlock 
-            img1={'/c++.png'} img1alt={"c++"}
-            img2={'/qt.png'} img2alt={"qt"}/>
+            img1={'/skills/c++.png'} img1alt={"c++"}
+            img2={'/skills/qt.png'} img2alt={"qt"}/>
         </div>
       </div>
 
