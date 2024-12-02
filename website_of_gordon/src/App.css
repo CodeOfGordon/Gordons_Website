@@ -121,7 +121,8 @@ h1 {
     color: #393939;
     background-color: #D0DBE7;
     border-radius: 5%;
-    max-width: 50%;
+    max-width: 40%;
+    max-height: 90%;
     padding: 0% 3% 0% 3%;
     margin-left: 5%;
 }
@@ -129,6 +130,12 @@ h1 {
 #resume { 
     font-size: 150%;
 }
+
+#figma {
+    max-width: 100%;
+    max-height: 80%;
+}
+
 
 /*images*/
 #More-info2 {
@@ -200,6 +207,7 @@ h1 {
     max-width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .caroussel-button {
@@ -221,41 +229,37 @@ h1 {
 
 #caroussel-content {
     display: flex;
-    flex-basis: 75%;
+    flex-direction: column;
     background-color: #D0DBE7;
-    min-width: 75%;
-    max-height: 75%;
+    min-width: 25%;
+    max-height: 50%;
     border-radius: 5%;
+    padding-bottom: 2%;
+    align-items: center;
     transition: opacity 0.5s ease-in-out;
 }
-.fading {
-    opacity: 0;
+#carousel-loading {
+    max-width: 90%;
 }
+.fading-out {
+    opacity: 0;
+  }
+.fading-in {
+    opacity: 1;
+  }
 #caroussel-content a {
     display: contents;
 }
 #caroussel-content a img {
-    max-width: 50%;
-    padding: 2%;
+    max-width: 90%;
     object-fit: contain;
     border-radius: 5%;
-    transition: opacity 0.5s ease-in-out;
 }
 
-#caroussel-text {
-    padding: 0% 2% 0% 2%;
-}
-#caroussel-text h3 {
-    font-family: "Anybody-Regular", Helvetica;
+#caroussel-content h3 {
+    font-family: "Anybody-Regular";
     font-weight: 400;
-    font-size: 200%;
-}
-#caroussel-text p {
-    padding: 0% 2% 0% 2%;
-    color: #293f56;
-    font-family: "Antic Slab-Regular", Helvetica;
     font-size: 150%;
-    font-weight: 400;
 }
 
 
@@ -284,20 +288,10 @@ h1 {
         margin-bottom: 2%;
     }
     /* --Experience-- */
-    #caroussel-text {
-        padding: 3% 2% 0% 2%;
-    }
-    #caroussel-text h3 {
-        font-family: "Anybody-Regular", Helvetica;
+    #caroussel-content h3 {
+        font-family: "Anybody-Regular";
         font-weight: 400;
         font-size: 1rem;
-    }
-    #caroussel-text p {
-        padding: 0% 2% 0% 2%;
-        color: #293f56;
-        font-family: "Antic Slab-Regular", Helvetica;
-        font-size: 1rem;
-        font-weight: 400;
     }
 }
 @media (max-width: 650px) {
@@ -353,21 +347,10 @@ h1 {
         font-size: 100%;
     }
     /* --Experience-- */
-    #caroussel-text {
-        padding: 3% 2% 0% 2%;
-    }
-    #caroussel-text h3 {
-        font-family: "Anybody-Regular", Helvetica;
+    #caroussel-content h3 {
+        font-family: "Anybody-Regular";
         font-weight: 400;
         font-size: .75rem;
     }
-    #caroussel-text p {
-        padding: 0% 2% 0% 2%;
-        color: #293f56;
-        font-family: "Antic Slab-Regular", Helvetica;
-        font-size: .5rem;
-        font-weight: 400;
-    }
- 
 }
 

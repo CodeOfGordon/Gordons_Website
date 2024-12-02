@@ -4,22 +4,15 @@ import CarousselBlock from './components/CarousselBlock.jsx';
 
 function App() {
   const carrouselInfo = {
-    images: ['/public/caroussel/travel_therapy.png', '/public/caroussel/pokemon_showdown.png', '/public/caroussel/wallpaper_playlist.png'],
-    altr: ["Travel Therapy Discord Bot", "Pokemon Showdown Demo", "Wallpaper Engine Playlist Playlist"],
-    titles: ["Travel Therapy Discord Bot", "Pokemon Showdown Demo", "Wallpaper Engine Playlist Playlist"],
-    paragraphs: [
-      "We created a Discord bot using Python, the Co:here API, and Discord API. This bot uses AI to suggest places in Toronto to calm down depending on the input it receives.",
-      "We created a demo UI for a pokemon showdown game with randomized pokemon and movesets. This was created using Python and Tkinter.",
-      "I created this to help others create a playlist of their playlists! I achieved this using Wallpaper Engine’s commands, batch, vbs, and understanding task manager."
-    ],
+    images: ['/caroussel/travel_therapy.png', '/caroussel/pokemon_showdown.png', '/caroussel/wallpaper_playlist.png', '/caroussel/express-test-message-board-sc.png'],
+    altr: ["Travel Therapy Discord Bot", "Pokemon Showdown Demo", "Wallpaper Engine Playlist Playlist", "Express Test Message Board"],
+    titles: ["Travel Therapy Discord Bot", "Pokemon Showdown Demo", "Wallpaper Engine Playlist Playlist", "Express Test Message Board"],
     links: ['https://github.com/alexszokolay/Uoft-ECKS',
       'https://github.com/CodeOfGordon/Pokemon-battle-simulator',
-      'https://github.com/CodeOfGordon/Wallpaper-Engine-Playlist-Playlist'
+      'https://github.com/CodeOfGordon/Wallpaper-Engine-Playlist-Playlist',
+      'https://github.com/CodeOfGordon/test_express_message_board'
     ]
   }
-  
-  
-
   return (
     <div id="App">
       
@@ -39,13 +32,16 @@ function App() {
           <h1 id="subtext-wrapper">I am a student at the University of Waterloo with a passion for learning</h1>
           <div id="Social-medias">
             <a target="noreferrer" href="https://www.linkedin.com/in/gordon-huynh-02a5571b3/">
-              <img id="linkedin-symbole" alt="Linkedin symbole" src='/bio/LinkedIn-Symbole 1.png' />
+              <img id="linkedin-symbole" alt="Linkedin logo" src='/bio/LinkedIn-Symbole 1.png' />
             </a>
             <a target="noreferrer" href="https://github.com/CodeOfGordon?tab=repositories">
-              <img id="github-invertocat" alt="Github invertocat" src='/bio/GitHub_Invertocat_Logo 1.png' />
+              <img id="github-invertocat" alt="Github logo" src='/bio/GitHub_Invertocat_Logo 1.png' />
             </a>
-            <a id="resume-wrapper" target="noreferrer" href="https://drive.google.com/file/d/1AZuH0TtcJ1zeRJwlqBP9MoFbTMO1GisN/view?usp=sharing">
+            <a id="resume-wrapper"alt="resume box" target="noreferrer" href="https://drive.google.com/file/d/1AZuH0TtcJ1zeRJwlqBP9MoFbTMO1GisN/view?usp=sharing">
               <h1 id="resume">Resume</h1>
+            </a>
+            <a target="noreferrer" href="https://www.figma.com/design/X13oHDNL1fgeMo7je4vSjJ/Personal-website?node-id=1-6&m=dev&t=HMH7n7xwRNnZRUGp-1">
+              <img id="figma" alt="Figma logo" src='/bio/figma_logo.png' />
             </a>
           </div>
         </div>
@@ -62,11 +58,9 @@ function App() {
       <div id="about-me-wrapper" className="info-block">
         <h1>About me</h1>
         <p className='basic-text'>
-          I’m student studying for a Bachelors Degree of Arts in Math Economics, 
-          and I am planning to minor in computing considering my interest in tech! 
-          <br/><br/>
-          There are many things I have learned, yet to learn, and things that I will want 
-          to learn in the future; and I hope I work towards these goals in the workplace!
+          I’m student studying a Bachelors Degree in Math Economics, with an interest in data science and software development, 
+          <br/>
+          and this is my portfolio. Feel free to take a look!
         </p>
       </div>
 
@@ -87,7 +81,8 @@ function App() {
           <br/>
           <LogosBlock 
             img1={'/skills/c++.png'} img1alt={"c++"}
-            img2={'/skills/qt.png'} img2alt={"qt"}/>
+            img2={'/skills/qt.png'} img2alt={"qt"}
+            img3={'/skills/express-js.png'} img3alt={"Express JS"}/>
         </div>
       </div>
 
@@ -96,21 +91,10 @@ function App() {
         <CarousselBlock 
           images={carrouselInfo.images} 
           altr={carrouselInfo.altr} 
-          titles={carrouselInfo.titles} 
-          paragraphs={carrouselInfo.paragraphs}
+          titles={carrouselInfo.titles}
           links={carrouselInfo.links}
         />
       </div>
-
-      {/* <div id="form-wrapper" className="info-block">
-        <h1>Under construction</h1>
-        <p className='basic-text'>
-          
-        </p>
-        <form id='email'>
-          
-        </form>
-      </div> */}
       </body>
     </div>
   );
