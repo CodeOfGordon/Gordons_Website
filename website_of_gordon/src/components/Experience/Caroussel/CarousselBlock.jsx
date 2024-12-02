@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import './CarousselBlock.css';
 
 export default function CarousselBlock ({images, altr, titles, links}) {
     const FadeIn = "fading-in";

@@ -1,0 +1,43 @@
+:root { 
+    --font-primary: "Noto Sans Tai Viet-Regular", Helvetica;
+    --font-header: "Be Vietnam-Bold", Helvetica;
+    --font-caroussel: "Anybody-Regular";
+
+    --font-primary-color: #293f56;
+    --font-secondary-color: #393939;
+
+    --background-color: #FAFCFF;
+    --primary-color: #D0DBE7;
+    --secondary-color: #89A5C2;
+    
+}
+
+h1 {
+    color: var(--font-primary-color);
+    font-family: var(--font-header);
+    font-size: 4rem;
+}
+
+.info-block {
+    max-width: 90%;
+    min-height: 50%;
+    margin: 0% 3% 10% 3%;
+}
+
+.basic-text {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 950px) {
+    h1 { 
+        font-size: 2rem; 
+    }
+}
+@media (max-width: 650px) {
+    h1 { 
+        font-size: 1.2rem; 
+    }
+    .basic-text {
+        font-size: 1rem;
+    }
+}

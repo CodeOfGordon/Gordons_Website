@@ -1,0 +1,21 @@
+@import url('../../../common.css');
+
+
+#logos {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;    
+}
+
+.logos-block {
+    max-width: 50%;
+    display: flex;
+    flex-shrink: 5;
+    height: auto;
+    align-items: center;
+    gap: 5%;
+}
+.logos-block img {
+    max-width: 25%;
+    min-height: inherit;
+}

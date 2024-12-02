@@ -1,0 +1,7 @@
+@import url('../../common.css');
+
+#about-me-wrapper {
+    max-height: 27rem;
+    padding: 1% 2% 3% 4%;
+    background-color: var(--secondary-color);
+}
