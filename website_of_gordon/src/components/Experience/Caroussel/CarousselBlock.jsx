@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './CarousselBlock.css';
 
-export default function CarousselBlock ({images, altr, titles, links}) {
+export default function CarousselBlock({ projects }) {
     const [current, setCurrent] = useState(
-      images.length > 0 ? Math.floor(images.length / 2) : 0
+      projects.length > 0 ? Math.floor(projects.length / 2) : 0
     );
     const visibleCount = 3;
 
     const handlePrev = () => setCurrent((prev) => Math.max(prev - 1, 0));
-    const handleNext = () => setCurrent((prev) => Math.min(prev + 1, images.length - 1));
+    const handleNext = () => setCurrent((prev) => Math.min(prev + 1, projects.length - 1));
 
     // Calculate indices for left, center, right slots
     const getVisibleIndices = () => {
-        if (images.length === 0) return [null, null, null];
+        if (projects.length === 0) return [null, null, null];
         // If far left of caroussel
-        if (current === 0) return [null, 0, 1 < images.length ? 1 : null];
+        if (current === 0) return [null, 0, 1 < projects.length ? 1 : null];
         // If far right of caroussel
-        if (current === images.length - 1) return [images.length - 2 >= 0 ? images.length - 2 : null, images.length - 1, null];
+        if (current === projects.length - 1) return [projects.length - 2 >= 0 ? projects.length - 2 : null, projects.length - 1, null];
         // If middle of caroussel
         return [current - 1, current, current + 1];
     };
@@ -41,15 +41,15 @@ export default function CarousselBlock ({images, altr, titles, links}) {
                 >
                   {idx !== null ? (
                     <>
-                      <a href={links[idx]} target="_blank" rel="noopener noreferrer">
+                      <a href={projects[idx].link} target="_blank" rel="noopener noreferrer">
                         <img
-                          src={images[idx]}
-                          alt={altr[idx]}
-                          title={titles[idx]}
+                          src={projects[idx].image}
+                          alt={projects[idx].alt}
+                          title={projects[idx].title}
                         />
                       </a>
                       {/* Only show title for center image */}
-                      {i === 1 && <p className="basic-text">{titles[idx]}</p>}
+                      {i === 1 && <p className="basic-text">{projects[idx].title}</p>}
                     </>
                   ) : (
                     // Empty slot for when the image is at the start or end
@@ -61,7 +61,7 @@ export default function CarousselBlock ({images, altr, titles, links}) {
             <button
                 className="caroussel-arrow right"
                 onClick={handleNext}
-                disabled={current === images.length - 1}
+                disabled={current === projects.length - 1}
                 aria-label="Next"
             >
                 &#8594;
