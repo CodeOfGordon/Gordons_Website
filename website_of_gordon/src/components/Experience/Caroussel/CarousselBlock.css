@@ -1,79 +1,101 @@
-@import url('../../../common.css');
-
-#experience-wrapper {
-    margin-bottom: 20%;
-}
-#caroussel {
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+#caroussel-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem 0;
 }
 
-.caroussel-button {
-    background: transparent;
-    border: 0;
-    max-width: 75%;
-    min-height: 100%;
-    opacity: 25%;
+.caroussel-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  z-index: 2;
 }
-.caroussel-button:hover {
-    opacity: 100%;
-    transition: .5s;
-}
-.caroussel-button img {
-    max-width: 75%;
-    min-height: 100%;
-    cursor: pointer;
+.caroussel-arrow:disabled {
+  opacity: 0.2;
+  cursor: default;
 }
 
-#caroussel-content {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--primary-color);
-    min-width: 25%;
-    max-height: 50%;
-    border-radius: 5%;
-    padding-bottom: 2%;
-    align-items: center;
-    transition: opacity 0.5s ease-in-out;
+.caroussel-track {
+  display: flex;
+  gap: 2rem;
+  width: 70vw;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out; /* smooth animation */
 }
-#carousel-loading {
-    max-width: 90%;
+
+.caroussel-slide {
+  flex: 0 0 30%;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
-.fading-out {
-    opacity: 0;
+
+.caroussel-slide img {
+  width: 100%;
+  aspect-ratio: 600 / 568; /* Figma ratio */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #f8f8f8;
+}
+
+.caroussel-slide.caroussel-center img {
+  border: 2px solid var(--primary-color, #D0DBE7);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.caroussel-slide.caroussel-center .basic-text {
+  margin-top: 0.5rem;
+  text-align: center;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caroussel-slide.caroussel-side {
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+
+.empty-slot {
+  width: 100%;
+  height: 200px;
+  background: transparent;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .caroussel-track {
+    width: 95vw;
+    gap: 1rem;
   }
-.fading-in {
-    opacity: 1;
+  .caroussel-slide {
+    flex-basis: 45%;
+    max-width: 45%;
   }
-#caroussel-content a {
-    display: contents;
 }
-#caroussel-content a img {
-    max-width: 90%;
-    object-fit: contain;
-    border-radius: 5%;
-}
-
-#caroussel-content h3 {
-    font-family: var(--font-caroussel);
-    font-weight: 400;
-    font-size: 150%;
-}
-
-
-@media (max-width: 950px) {
-    #caroussel-content h3 {
-        font-family: var(--font-caroussel);
-        font-weight: 400;
-        font-size: 1rem;
-    }
-}
-@media (max-width: 650px) {
-    #caroussel-content h3 {
-        font-family: var(--font-caroussel);
-        font-weight: 400;
-        font-size: .75rem;
-    }
+@media (max-width: 600px) {
+  .caroussel-track {
+    width: 100vw;
+    gap: 0.5rem;
+  }
+  .caroussel-slide {
+    flex-basis: 80%;
+    max-width: 80%;
+  }
+  .caroussel-slide.caroussel-side {
+    display: none;
+  }
 }

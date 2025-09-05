@@ -1,7 +1,7 @@
 :root { 
-    --font-primary: "Noto Sans Tai Viet-Regular", Helvetica;
-    --font-header: "Be Vietnam-Bold", Helvetica;
-    --font-caroussel: "Anybody-Regular";
+    --font-primary: "Inter", "Noto Sans", Helvetica, Arial, sans-serif;
+    --font-header: "Poppins", "Montserrat", Helvetica, Arial, sans-serif;
+    --font-caroussel: "Inter", "Anybody", sans-serif;
 
     --font-primary-color: #293f56;
     --font-secondary-color: #393939;
@@ -9,33 +9,68 @@
     --background-color: #FAFCFF;
     --primary-color: #D0DBE7;
     --secondary-color: #89A5C2;
-    
 }
 
 h1 {
-    color: var(--font-primary-color);
-    font-family: var(--font-header);
-    font-size: 4rem;
+  color: var(--font-primary-color);
+  font-family: var(--font-header);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .info-block {
-    max-width: 90%;
-    min-height: 50%;
-    margin: 0% 3% 10% 3%;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 50vh;
+    margin: 3rem auto 6rem auto;
+    box-sizing: border-box;
+    overflow-x: auto;
+    padding: 3rem 2rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    font-size: 1.15rem;
+}
+
+.info-block img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .basic-text {
+    font-family: var(--font-primary);
     font-size: 1.5rem;
 }
 
-@media (max-width: 950px) {
-    h1 { 
-        font-size: 2rem; 
+/* Tablet and below */
+@media (max-width: 700px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .info-block {
+        padding: 1.5rem 0.5rem;
+        margin: 1.5rem auto 2rem auto;
+        font-size: 1rem;
+    }
+    .basic-text {
+        font-size: 1.1rem;
     }
 }
-@media (max-width: 650px) {
-    h1 { 
-        font-size: 1.2rem; 
+
+/* Mobile */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    .info-block {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        font-size: 0.95rem;
     }
     .basic-text {
         font-size: 1rem;

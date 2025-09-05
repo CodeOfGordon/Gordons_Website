@@ -1,0 +1,67 @@
+@import url('../../../common.css');
+
+.conveyor-belt-wrapper {
+  margin: 2rem 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.belt-label {
+  margin-bottom: 0.5rem;
+}
+
+.conveyor-belt {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.conveyor-belt.belt-right {
+  animation: scroll-right 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.skill-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  min-width: 80px;
+  text-align: center;
+}
+
+.skill-icon p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .conveyor-belt-wrapper {
+    margin: 1rem 0;
+  }
+  .belt-label {
+    font-size: 1rem;
+  }
+  .skill-icon {
+    font-size: 1.2rem;
+    min-width: 60px;
+  }
+  .conveyor-belt {
+    gap: 1rem;
+    animation-duration: 30s;
+  }
+}
