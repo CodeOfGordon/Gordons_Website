@@ -22,6 +22,7 @@ export const frameworks_libraries = [
   { name: "Dask", icon: "SiDask" },
   { name: "PySpark", icon: "SiApachespark" },
   { name: "DBT", icon: "SiDbt" },
+  { name: "Airflow", icon: "TbWindmill" },
   { name: "Scikit-Learn", icon: "SiScikitlearn" },
   { name: "PyTorch", icon: "SiPytorch" },
   { name: "Hugging Face", icon: "SiHuggingface" },
