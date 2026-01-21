@@ -3,6 +3,7 @@
 export const languages = [
   { name: "Python", icon: "SiPython" },
   { name: "JavaScript", icon: "SiJavascript" },
+  { name: "TypeScript", icon: "SiTypescript" },
   { name: "R", icon: "SiR" },
   { name: "SQL", icon: "SiPostgresql" },
   { name: "C", icon: "SiC" },
@@ -18,15 +19,22 @@ export const frameworks_libraries = [
   { name: "FastAPI", icon: "SiFastapi" },
   { name: "SQLAlchemy", icon: "SiSqlalchemy" },
   { name: "Pandas", icon: "SiPandas" },
+  { name: "Dask", icon: "SiDask" },
+  { name: "PySpark", icon: "SiApachespark" },
+  { name: "DBT", icon: "SiDbt" },
   { name: "Scikit-Learn", icon: "SiScikitlearn" },
   { name: "PyTorch", icon: "SiPytorch" },
   { name: "Hugging Face", icon: "SiHuggingface" },
   { name: "LangChain", icon: "SiLangchain" },
-  { name: "PySpark", icon: "SiApachespark" }
+  { name: "ChromaDB", icon: "TbCirclesRelation" }
 ];
 
 export const tools = [
   { name: "Azure", icon: "VscAzure" },
+  { name: "PowerBI", icon: "BsBarChartFill" },
+  { name: "ADF", icon: "LuFactory"},
+  { name: "DataBricks", icon: "SiDatabricks" },
+  { name: "Snowflake", icon: "SiSnowflake" },
   { name: "Git", icon: "SiGit" },
   { name: "Bash", icon: "SiGnubash" },
   { name: "Linux", icon: "SiLinux" },
@@ -34,5 +42,6 @@ export const tools = [
   { name: "Swagger", icon: "SiSwagger" },
   { name: "Excel", icon: "FaFileExcel" },
   { name: "Salesforce", icon: "SiSalesforce" },
-  { name: "Zapier", icon: "SiZapier" }
+  { name: "Zapier", icon: "SiZapier" },
+  
 ];
