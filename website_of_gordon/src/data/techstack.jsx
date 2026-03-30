@@ -36,13 +36,15 @@ export const tools = [
   { name: "ADF", icon: "LuFactory"},
   { name: "DataBricks", icon: "SiDatabricks" },
   { name: "Snowflake", icon: "SiSnowflake" },
+  { name: "Apache Kafka", icon: "SiApachekafka"},
+  { name: "Docker", icon: "FaDocker"  },
   { name: "Git", icon: "SiGit" },
   { name: "Bash", icon: "SiGnubash" },
   { name: "Linux", icon: "SiLinux" },
   { name: "Jira", icon: "SiJira" },
   { name: "Swagger", icon: "SiSwagger" },
-  { name: "Excel", icon: "FaFileExcel" },
   { name: "Salesforce", icon: "SiSalesforce" },
   { name: "Zapier", icon: "SiZapier" },
+  { name: "Excel", icon: "FaFileExcel" },
   
 ];

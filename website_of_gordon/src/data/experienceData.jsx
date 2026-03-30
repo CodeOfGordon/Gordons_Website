@@ -36,6 +36,12 @@ export const projects = [
     link: "https://github.com/CodeOfGordon/Categorizing-spotify-songs",
   },
   {
+    image: "/caroussel/streaming-stock.png",
+    alt: "Streaing Stock",
+    title: "LSTM Streaming Stock Prediction",
+    link: "https://github.com/CodeOfGordon/streaming-stock",
+  },
+  {
     image: "/caroussel/CxC_submission.png",
     alt: "CxC Submission on Times Series Forecasting",
     title: "CxC Submission on Times Series Forecasting",
