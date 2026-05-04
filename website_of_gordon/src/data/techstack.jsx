@@ -17,6 +17,8 @@ export const frameworks_libraries = [
   { name: "PyQt", icon: "SiQt" },
   { name: "Express", icon: "SiExpress" },
   { name: "FastAPI", icon: "SiFastapi" },
+  { name: "NextJS", icon: "RiNextjsFill" },
+  { name: "NestJS", icon: "SiNestjs" },
   { name: "SQLAlchemy", icon: "SiSqlalchemy" },
   { name: "Pandas", icon: "SiPandas" },
   { name: "Dask", icon: "SiDask" },

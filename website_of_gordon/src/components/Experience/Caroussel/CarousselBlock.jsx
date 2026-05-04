@@ -5,19 +5,29 @@ export default function CarousselBlock({ projects }) {
     const [current, setCurrent] = useState(
       projects.length > 0 ? Math.floor(projects.length / 2) : 0
     );
-    const visibleCount = 3;
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
-    const handlePrev = () => setCurrent((prev) => Math.max(prev - 1, 0));
-    const handleNext = () => setCurrent((prev) => Math.min(prev + 1, projects.length - 1));
+    const handlePrev = () => {
+      if (current > 0 && !isTransitioning) {
+        setIsTransitioning(true);
+        setCurrent((prev) => Math.max(prev - 1, 0));
+        setTimeout(() => setIsTransitioning(false), 500);
+      }
+    };
+
+    const handleNext = () => {
+      if (current < projects.length - 1 && !isTransitioning) {
+        setIsTransitioning(true);
+        setCurrent((prev) => Math.min(prev + 1, projects.length - 1));
+        setTimeout(() => setIsTransitioning(false), 500);
+      }
+    };
 
     // Calculate indices for left, center, right slots
     const getVisibleIndices = () => {
         if (projects.length === 0) return [null, null, null];
-        // If far left of caroussel
         if (current === 0) return [null, 0, 1 < projects.length ? 1 : null];
-        // If far right of caroussel
         if (current === projects.length - 1) return [projects.length - 2 >= 0 ? projects.length - 2 : null, projects.length - 1, null];
-        // If middle of caroussel
         return [current - 1, current, current + 1];
     };
 

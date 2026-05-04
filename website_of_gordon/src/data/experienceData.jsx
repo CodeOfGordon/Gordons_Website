@@ -15,7 +15,7 @@ export const projects = [
     image: "/caroussel/travel_therapy.png",
     alt: "Travel Therapy",
     title: "Travel Therapy",
-    link: "https://github.com/alexszokolay/Uoft-ECKS",
+    link: "https://devpost.com/software/travel-therapy",
   },
   {
     image: "/caroussel/Grow_RAG_helper_embed.drawio.png",
@@ -40,6 +40,12 @@ export const projects = [
     alt: "Streaing Stock",
     title: "LSTM Streaming Stock Prediction",
     link: "https://github.com/CodeOfGordon/streaming-stock",
+  },
+  {
+    image: "/caroussel/threeoneone.png",
+    alt: "Three One One",
+    title: "ThreeOneOne - Live Hazard Detection Map",
+    link: "https://devpost.com/software/threeoneone-nrfyic",
   },
   {
     image: "/caroussel/CxC_submission.png",
