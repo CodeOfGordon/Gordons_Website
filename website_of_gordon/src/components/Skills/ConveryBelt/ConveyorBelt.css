@@ -6,13 +6,20 @@
   width: 100%;
 }
 
+.conveyor-belt-wrapper:focus-within .conveyor-belt,
+.conveyor-belt-wrapper:hover .conveyor-belt {
+  animation-play-state: paused;
+}
+
 .belt-label {
   margin-bottom: 0.5rem;
 }
 
 .conveyor-belt {
+  --belt-gap: 2rem;
+  --belt-half-gap: 1rem;
   display: flex;
-  gap: 2rem;
+  gap: var(--belt-gap);
   width: max-content;
   animation: scroll-left 20s linear infinite;
   margin: 0 auto;
@@ -27,11 +34,11 @@
 
 @keyframes scroll-left {
   0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(calc(-50% - var(--belt-half-gap)), 0, 0); }
 }
 
 @keyframes scroll-right {
-  0% { transform: translate3d(-50%, 0, 0); }
+  0% { transform: translate3d(calc(-50% - var(--belt-half-gap)), 0, 0); }
   100% { transform: translate3d(0, 0, 0); }
 }
 
@@ -62,7 +69,14 @@
     min-width: 60px;
   }
   .conveyor-belt {
-    gap: 1rem;
+    --belt-gap: 1rem;
+    --belt-half-gap: 0.5rem;
     animation-duration: 30s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .conveyor-belt {
+    animation-play-state: paused;
   }
 }
