@@ -1,13 +1,13 @@
 export const projects = [
   {
-    image: "/caroussel/spotify-dasboard.png",
-    alt: "Spotify Dashboard",
+    image: "/caroussel/spotify-dashboard-cover.webp",
+    alt: "Spotify listening dashboard with song, artist, and streaming charts",
     title: "Spotify Dashboard",
     link: "https://github.com/CodeOfGordon/PowerBI-Spotify-Dashboard",
   },
   {
-    image: "/caroussel/credit-card-fraud.png",
-    alt: "Credit Card Fraud Detection",
+    image: "/caroussel/credit-card-fraud-results.webp",
+    alt: "F1 score comparison across credit card fraud detection models",
     title: "Credit Card Fraud Detection",
     link: "https://github.com/CodeOfGordon/credit-card-fraud",
   },
@@ -37,7 +37,7 @@ export const projects = [
   },
   {
     image: "/caroussel/streaming-stock.png",
-    alt: "Streaing Stock",
+    alt: "Streaming Stock",
     title: "LSTM Streaming Stock Prediction",
     link: "https://github.com/CodeOfGordon/streaming-stock",
   },

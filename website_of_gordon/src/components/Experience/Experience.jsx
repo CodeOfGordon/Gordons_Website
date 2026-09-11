@@ -3,9 +3,9 @@ import { projects } from "../../data/experienceData";
 
 export default function Experience() {
   return (
-    <div id="experience-wrapper" className="info-block">
-      <h1>Experience</h1>
+    <section id="projects-wrapper" className="info-block" aria-labelledby="projects-title">
+      <h1 id="projects-title">Projects</h1>
       <CarousselBlock projects={projects} />
-    </div>
+    </section>
   );
 }

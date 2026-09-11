@@ -1,116 +1,203 @@
-#caroussel-slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@import url('../../../common.css');
+
+#projects-title {
+  margin: 0;
+  text-align: left;
+}
+
+.project-carousel {
   width: 100%;
-  position: relative;
-  margin: 2rem 0;
+  margin-top: clamp(2rem, 4vw, 3.5rem);
 }
 
-.caroussel-arrow {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 0.2s;
-  z-index: 2;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0.5rem;
+.project-carousel__track {
+  display: grid;
+  grid-auto-columns: 47%;
+  grid-auto-flow: column;
+  align-items: stretch;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  padding: 0.25rem 0 1.25rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scrollbar-width: none;
 }
 
-.caroussel-arrow.left {
-  left: 0;
+.project-carousel__track::-webkit-scrollbar {
+  display: none;
 }
 
-.caroussel-arrow.right {
-  right: 0;
+.project-carousel__track:focus-visible {
+  border-radius: 14px;
+  outline: 3px solid color-mix(in srgb, var(--secondary-color), transparent 35%);
+  outline-offset: 6px;
 }
 
-.caroussel-arrow:disabled {
-  opacity: 0.2;
-  cursor: default;
-}
-
-.caroussel-track {
-  display: flex;
-  gap: 2rem;
-  width: 70vw;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-  backface-visibility: hidden;
-}
-
-.caroussel-slide {
-  flex: 0 0 30%;
-  max-width: 30%;
+.project-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+  gap: clamp(1rem, 2vw, 1.4rem);
+  min-width: 0;
+  padding: clamp(1rem, 2.4vw, 1.6rem);
+  background: #d0dbe7;
+  border-radius: 16px;
+  scroll-snap-align: start;
 }
 
-.caroussel-slide img {
-  width: 100%;
-  aspect-ratio: 600 / 568; /* Figma ratio */
-  object-fit: cover;
+.project-card h2 {
+  margin: 0;
+  color: var(--font-primary-color);
+  font-family: var(--font-header);
+  font-size: clamp(1.1rem, 2.2vw, 1.55rem);
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+.project-card__media {
+  position: relative;
+  display: block;
+  aspect-ratio: 8 / 5;
+  margin-top: auto;
+  overflow: hidden;
+  background: #f7f9fc;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  background: #f8f8f8;
+  color: #fff;
+  text-decoration: none;
 }
 
-.caroussel-slide.caroussel-center img {
-  border: 2px solid var(--primary-color, #D0DBE7);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+.project-card__media::after {
+  position: absolute;
+  inset: 48% 0 0;
+  content: "";
+  background: linear-gradient(to bottom, transparent, rgba(13, 27, 42, 0.72));
+  opacity: 0;
+  transition: opacity 180ms var(--ease-out);
+  pointer-events: none;
 }
 
-.caroussel-slide.caroussel-center .basic-text {
-  margin-top: 0.5rem;
-  text-align: center;
-  min-height: 2.5em;
+.project-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: contain;
+  border-radius: inherit;
+  box-shadow: none;
+}
+
+.project-card__visit {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  bottom: 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 180ms var(--ease-out), transform 180ms var(--ease-out);
 }
 
-.caroussel-slide.caroussel-side {
-  opacity: 0.7;
-  transform: scale(0.95);
+.project-card__media:hover::after,
+.project-card__media:focus-visible::after,
+.project-card__media:hover .project-card__visit,
+.project-card__media:focus-visible .project-card__visit {
+  opacity: 1;
 }
 
-.empty-slot {
+.project-card__media:hover .project-card__visit,
+.project-card__media:focus-visible .project-card__visit {
+  transform: translateY(0);
+}
+
+.project-carousel__controls {
+  display: grid;
+  grid-template-columns: auto minmax(120px, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.project-carousel__count {
+  min-width: 3.5rem;
+  color: var(--font-secondary-color);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.project-carousel__progress {
+  height: 2px;
+  overflow: hidden;
+  background: var(--primary-color);
+}
+
+.project-carousel__progress span {
+  display: block;
   width: 100%;
-  height: 200px;
-  background: transparent;
+  height: 100%;
+  background: var(--font-primary-color);
+  transform-origin: left;
+  transition: transform 260ms var(--ease-in-out);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .caroussel-track {
-    width: 95vw;
-    gap: 1rem;
+.project-carousel__buttons {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.project-carousel__buttons button {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  padding: 0;
+  background: #fff;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  color: var(--font-primary-color);
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms var(--ease-out);
+}
+
+.project-carousel__buttons button:not(:disabled):hover {
+  background: var(--primary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.project-carousel__buttons button:disabled {
+  cursor: default;
+  opacity: 0.35;
+}
+
+@media (max-width: 700px) {
+  .project-carousel__track {
+    grid-auto-columns: 84%;
+    gap: 0.9rem;
   }
-  .caroussel-slide {
-    flex-basis: 45%;
-    max-width: 45%;
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-card__visit {
+    opacity: 1;
+    transform: none;
+  }
+
+  .project-card__media::after {
+    opacity: 1;
   }
 }
-@media (max-width: 600px) {
-  .caroussel-track {
-    width: 100vw;
-    gap: 0.5rem;
-  }
-  .caroussel-slide {
-    flex-basis: 80%;
-    max-width: 80%;
-  }
-  .caroussel-slide.caroussel-side {
-    display: none;
+
+@media (prefers-reduced-motion: reduce) {
+  .project-carousel__progress span,
+  .project-card__visit,
+  .project-card__media::after,
+  .project-carousel__buttons button {
+    transition: none;
   }
 }
