@@ -43,6 +43,9 @@
 .icon-link {
   display: flex;
   align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 #home-introduction-wrapper .icon-img {
@@ -68,7 +71,9 @@
   transition: 0.2s;
   cursor: pointer;
   margin: 0 0.5rem;
-  display: inline-block;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
 }
 
 .resume-wrapper:hover {

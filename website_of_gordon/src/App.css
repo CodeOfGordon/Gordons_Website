@@ -23,8 +23,8 @@ body {
 
 /* Navbar */
 #navbar-wrapper {
-    background-color: var(--background-color, #fff);
-    opacity: 0.9;
+    background-color: color-mix(in srgb, var(--background-color, #fff), transparent 8%);
+    backdrop-filter: blur(12px);
     width: 100%;
     position: sticky;
     top: 0;
@@ -45,18 +45,17 @@ body {
     flex: 1;
     justify-content: center;
     align-items: center;
-    transition: max-height 0.3s;
 }
 
 #navbar li a {
-  color: black;
+  color: var(--font-primary-color);
   text-decoration: none;
   padding: 0.5em 1em;
   border-radius: 4px;
   transition: 0.2s;
 }
 #navbar li a:hover {
-  background: #eee;
+  background: color-mix(in srgb, var(--primary-color), transparent 45%);
 }
 
 /* Hamburger styles */
@@ -65,8 +64,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   cursor: pointer;
@@ -91,18 +90,34 @@ body {
     width: 100vw;
     flex-direction: column;
     background: var(--background-color, #fff);
-    max-height: 0;
-    overflow: hidden;
+    padding: 1rem 0;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     font-size: 1rem;
-    transition: max-height 0.3s;
+    transition: opacity 180ms ease, transform 180ms var(--ease-out), visibility 0s 180ms;
   }
   #navbar.open {
-    max-height: 300px;
-    padding: 1rem 0;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition-delay: 0s;
   }
   #hamburger {
     display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  #navbar,
+  #hamburger .bar,
+  #info2-icon {
+    transition: none;
   }
 }
 

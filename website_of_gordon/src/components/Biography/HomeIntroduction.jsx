@@ -2,15 +2,15 @@ import './HomeIntroduction.css';
 
 export default function HomeIntroduction() {
   return (
-    <div id="home-introduction-wrapper" className="info-block">
+    <section id="home-introduction-wrapper" className="info-block" aria-labelledby="home-title">
       <div className="intro-flex">
         <img
           className="author-img"
-          alt="Author"
+          alt="Gordon Huynh"
           src="/home-introduction/Author 1.png"
         />
         <div className="intro-content">
-          <h1 className="intro-title">Hi, I’m Gordon Huynh</h1>
+          <h1 id="home-title" className="intro-title">Hi, I’m Gordon Huynh</h1>
           <p className="basic-text">
             I am a student at the University of Waterloo with a passion for learning.
           </p>
@@ -19,7 +19,7 @@ export default function HomeIntroduction() {
               className="icon-link"
               target="_blank"
               rel="noreferrer"
-              href="https://www.linkedin.com/in/gordon-huynh-02a5571b3/"
+              href="https://www.linkedin.com/in/gordon-huynh-uw/"
             >
               <img
                 className="icon-img"
@@ -62,6 +62,6 @@ export default function HomeIntroduction() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

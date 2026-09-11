@@ -1,7 +1,15 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("/fonts/manrope-latin-variable.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400 800;
+    font-display: swap;
+}
+
 :root { 
-    --font-primary: "Inter", "Noto Sans", Helvetica, Arial, sans-serif;
-    --font-header: "Poppins", "Montserrat", Helvetica, Arial, sans-serif;
-    --font-caroussel: "Inter", "Anybody", sans-serif;
+    --font-primary: "Manrope", "Segoe UI", sans-serif;
+    --font-header: "Manrope", "Segoe UI", sans-serif;
+    --font-caroussel: "Manrope", "Segoe UI", sans-serif;
 
     --font-primary-color: #293f56;
     --font-secondary-color: #393939;
@@ -9,6 +17,23 @@
     --background-color: #FAFCFF;
     --primary-color: #D0DBE7;
     --secondary-color: #89A5C2;
+
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--primary-color);
+  color: var(--font-primary-color);
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--secondary-color), transparent 30%);
+  outline-offset: 3px;
 }
 
 h1 {
@@ -25,12 +50,27 @@ h1 {
     min-height: 50vh;
     margin: 3rem auto 6rem auto;
     box-sizing: border-box;
-    overflow-x: auto;
+    overflow-x: clip;
     padding: 3rem 2rem;
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.06);
     font-size: 1.15rem;
+}
+
+.info-block[id] {
+  scroll-margin-top: calc(var(--navbar-height, 60px) + 1.5rem);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .info-block img {
@@ -53,7 +93,7 @@ h1 {
         font-size: 2rem;
     }
     .info-block {
-        padding: 1.5rem 0.5rem;
+        padding: 1.5rem 1rem;
         margin: 1.5rem auto 2rem auto;
         font-size: 1rem;
     }
@@ -64,15 +104,17 @@ h1 {
 
 /* Mobile */
 @media (max-width: 400px) {
-    h1 {
-        font-size: 1.2rem;
-    }
+    h1 { font-size: 1.8rem; }
     .info-block {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         font-size: 0.95rem;
     }
     .basic-text {
         font-size: 1rem;
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
