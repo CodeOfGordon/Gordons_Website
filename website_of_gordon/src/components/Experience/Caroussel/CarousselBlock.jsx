@@ -43,32 +43,48 @@ export default function CarousselBlock({ projects }) {
 
   return (
     <div className="project-carousel">
-      <div
-        ref={trackRef}
-        className="project-carousel__track"
-        onScroll={handleScroll}
-        onKeyDown={(event) => {
-          if (event.key === "ArrowLeft") moveTo(Math.max(0, current - 1));
-          if (event.key === "ArrowRight") moveTo(Math.min(projects.length - 1, current + 1));
-        }}
-        tabIndex="0"
-        aria-label="Project carousel. Use the left and right arrow keys to browse."
-      >
-        {projects.map((project, index) => (
-          <article className="project-card" key={`${project.title}-${project.image}`} aria-current={index === current ? "true" : undefined}>
-            <h2>{project.title}</h2>
-            {project.link ? (
-              <a className="project-card__media" href={project.link} target="_blank" rel="noopener noreferrer">
-                <img src={project.image} alt={project.alt} loading={index < 2 ? "eager" : "lazy"} />
-                <span className="project-card__visit">View project <LuArrowUpRight aria-hidden="true" /></span>
-              </a>
-            ) : (
-              <div className="project-card__media">
-                <img src={project.image} alt={project.alt} loading={index < 2 ? "eager" : "lazy"} />
-              </div>
-            )}
-          </article>
-        ))}
+      <div className="project-carousel__viewport">
+        <div
+          id="project-carousel-track"
+          ref={trackRef}
+          className="project-carousel__track"
+          onScroll={handleScroll}
+          onKeyDown={(event) => {
+            if (event.key === "ArrowLeft") {
+              event.preventDefault();
+              moveTo(Math.max(0, current - 1));
+            }
+            if (event.key === "ArrowRight") {
+              event.preventDefault();
+              moveTo(Math.min(projects.length - 1, current + 1));
+            }
+          }}
+          tabIndex="0"
+          aria-label="Project carousel. Use the left and right arrow keys to browse."
+        >
+          {projects.map((project, index) => (
+            <article className="project-card" key={`${project.title}-${project.image}`} aria-current={index === current ? "true" : undefined}>
+              <h2>{project.title}</h2>
+              {project.link ? (
+                <a className="project-card__media" href={project.link} target="_blank" rel="noopener noreferrer">
+                  <img src={project.image} alt={project.alt} loading={index < 4 ? "eager" : "lazy"} />
+                  <span className="project-card__visit">View project <LuArrowUpRight aria-hidden="true" /></span>
+                </a>
+              ) : (
+                <div className="project-card__media">
+                  <img src={project.image} alt={project.alt} loading={index < 4 ? "eager" : "lazy"} />
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
+
+        <button className="project-carousel__edge project-carousel__edge--previous" type="button" onClick={() => moveTo(current - 1)} disabled={current === 0} aria-controls="project-carousel-track" aria-label="Previous project">
+          <LuArrowLeft aria-hidden="true" />
+        </button>
+        <button className="project-carousel__edge project-carousel__edge--next" type="button" onClick={() => moveTo(current + 1)} disabled={current === projects.length - 1} aria-controls="project-carousel-track" aria-label="Next project">
+          <LuArrowRight aria-hidden="true" />
+        </button>
       </div>
 
       <div className="project-carousel__controls">
@@ -77,14 +93,6 @@ export default function CarousselBlock({ projects }) {
         </span>
         <div className="project-carousel__progress" aria-hidden="true">
           <span style={{ transform: `scaleX(${(current + 1) / projects.length})` }} />
-        </div>
-        <div className="project-carousel__buttons">
-          <button type="button" onClick={() => moveTo(current - 1)} disabled={current === 0} aria-label="Previous project">
-            <LuArrowLeft aria-hidden="true" />
-          </button>
-          <button type="button" onClick={() => moveTo(current + 1)} disabled={current === projects.length - 1} aria-label="Next project">
-            <LuArrowRight aria-hidden="true" />
-          </button>
         </div>
       </div>
     </div>
