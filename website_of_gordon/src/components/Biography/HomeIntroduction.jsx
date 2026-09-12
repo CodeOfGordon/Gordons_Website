@@ -11,8 +11,8 @@ export default function HomeIntroduction() {
         />
         <div className="intro-content">
           <h1 id="home-title" className="intro-title">Hi, I’m Gordon Huynh</h1>
-          <p className="basic-text">
-            I am a student at the University of Waterloo with a passion for learning.
+          <p className="intro-summary">
+            I build clear, useful products across software, data, and machine learning.
           </p>
           <div className="social-medias">
             <a

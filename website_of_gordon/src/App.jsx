@@ -12,6 +12,9 @@ function App() {
   return (
     <div id="App">
       <nav id="navbar-wrapper">
+        <a className="site-mark" href="#home-introduction-wrapper" onClick={() => setNavOpen(false)}>
+          Gordon Huynh
+        </a>
         <button
           id="hamburger"
           aria-label="Toggle navigation"

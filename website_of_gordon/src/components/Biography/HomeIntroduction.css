@@ -1,21 +1,28 @@
 @import url('../../common.css');
 
-.intro-flex {
+#home-introduction-wrapper {
   display: flex;
+  min-height: clamp(480px, 62vh, 680px);
   align-items: center;
-  gap: 2.5rem;
+  background: #fff;
+}
+
+.intro-flex {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2.5rem, 7vw, 6rem);
   width: 100%;
 }
 
 #home-introduction-wrapper .author-img {
-  max-width: 180px;
-  width: auto;
-  height: auto;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
   background: none;
   box-shadow: none;
   object-fit: cover;
-  margin: 0 auto 2rem auto;
+  margin: 0;
 }
 
 .intro-content {
@@ -26,18 +33,29 @@
 }
 
 .intro-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  max-width: none;
+  font-size: clamp(3rem, 6vw, 5.25rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0 0 1.5rem;
   color: var(--font-primary-color);
   font-family: var(--font-header);
   text-align: left;
+}
+
+.intro-summary {
+  max-width: 38ch;
+  margin: 0;
+  color: #34495e;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.6;
 }
 
 .social-medias {
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .icon-link {
@@ -84,7 +102,7 @@
 /* Responsive */
 @media (max-width: 900px) {
   .intro-flex {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: center;
     gap: 1.5rem;
   }
@@ -94,10 +112,12 @@
   }
   .intro-title {
     text-align: center;
-    font-size: 2rem;
+    max-width: 11ch;
+    font-size: clamp(2.5rem, 11vw, 4rem);
   }
   #home-introduction-wrapper .author-img {
-    max-width: 180px;
+    width: 150px;
+    height: 150px;
   }
   #home-introduction-wrapper .icon-img {
     width: 36px;
@@ -106,8 +126,13 @@
 }
 
 @media (max-width: 600px) {
+  #home-introduction-wrapper {
+    min-height: 620px;
+  }
+
   #home-introduction-wrapper .author-img {
-    max-width: 120px;
+    width: 120px;
+    height: 120px;
   }
   #home-introduction-wrapper .icon-img {
     width: 32px;
