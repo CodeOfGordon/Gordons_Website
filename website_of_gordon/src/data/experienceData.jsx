@@ -30,22 +30,16 @@ export const projects = [
     link: "https://github.com/CodeOfGordon/streaming-stock",
   },
   {
-    image: "/caroussel/credit-card-fraud-results.webp",
-    alt: "F1 score comparison across credit card fraud detection models",
-    title: "Credit Card Fraud Detection",
-    link: "https://github.com/CodeOfGordon/credit-card-fraud",
+    image: "/caroussel/Grow_RAG_helper_embed.drawio.png",
+    alt: "GoGrow Helper",
+    title: "GoGrow Helper",
+    link: "https://github.com/CodeOfGordon/grow_helper",
   },
   {
     image: "/caroussel/threeoneone.png",
     alt: "Three One One",
     title: "ThreeOneOne - Live Hazard Detection Map",
     link: "https://devpost.com/software/threeoneone-nrfyic",
-  },
-  {
-    image: "/caroussel/Grow_RAG_helper_embed.drawio.png",
-    alt: "GoGrow Helper",
-    title: "GoGrow Helper",
-    link: "https://github.com/CodeOfGordon/grow_helper",
   },
   {
     image: "/caroussel/CxC_submission.png",
