@@ -1,16 +1,27 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { LuArrowLeft, LuArrowRight, LuArrowUpRight } from "react-icons/lu";
 import "./CarousselBlock.css";
 
 export default function CarousselBlock({ projects }) {
-  const [current, setCurrent] = useState(0);
+  const initialIndex = Math.floor(projects.length / 2);
+  const [current, setCurrent] = useState(initialIndex);
   const trackRef = useRef(null);
   const frameRef = useRef(null);
+  const interactedRef = useRef(false);
 
   useEffect(() => () => window.cancelAnimationFrame(frameRef.current), []);
 
+  useLayoutEffect(() => {
+    const track = trackRef.current;
+    const slide = track?.children[initialIndex];
+    if (!track || !slide) return;
+
+    track.scrollLeft = slide.getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft;
+  }, [initialIndex]);
+
   const moveTo = (index) => {
+    interactedRef.current = true;
     const track = trackRef.current;
     const slide = track?.children[index];
     if (!track || !slide) return;
@@ -26,6 +37,13 @@ export default function CarousselBlock({ projects }) {
     frameRef.current = window.requestAnimationFrame(() => {
       const track = trackRef.current;
       if (!track) return;
+
+      if (!interactedRef.current) {
+        const slide = track.children[initialIndex];
+        track.scrollLeft = slide.getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft;
+        setCurrent(initialIndex);
+        return;
+      }
 
       const trackLeft = track.getBoundingClientRect().left;
       const closest = Array.from(track.children).reduce(
@@ -49,6 +67,8 @@ export default function CarousselBlock({ projects }) {
           ref={trackRef}
           className="project-carousel__track"
           onScroll={handleScroll}
+          onPointerDown={() => { interactedRef.current = true; }}
+          onWheel={() => { interactedRef.current = true; }}
           onKeyDown={(event) => {
             if (event.key === "ArrowLeft") {
               event.preventDefault();
@@ -67,12 +87,12 @@ export default function CarousselBlock({ projects }) {
               <h2>{project.title}</h2>
               {project.link ? (
                 <a className="project-card__media" href={project.link} target="_blank" rel="noopener noreferrer">
-                  <img src={project.image} alt={project.alt} loading={index < 4 ? "eager" : "lazy"} />
+                  <img src={project.image} alt={project.alt} loading={Math.abs(index - initialIndex) <= 2 ? "eager" : "lazy"} />
                   <span className="project-card__visit">View project <LuArrowUpRight aria-hidden="true" /></span>
                 </a>
               ) : (
                 <div className="project-card__media">
-                  <img src={project.image} alt={project.alt} loading={index < 4 ? "eager" : "lazy"} />
+                  <img src={project.image} alt={project.alt} loading={Math.abs(index - initialIndex) <= 2 ? "eager" : "lazy"} />
                 </div>
               )}
             </article>

@@ -1,27 +1,9 @@
 export const projects = [
   {
-    image: "/caroussel/spotify-dashboard-cover.webp",
-    alt: "Spotify listening dashboard with song, artist, and streaming charts",
-    title: "Spotify Dashboard",
-    link: "https://github.com/CodeOfGordon/PowerBI-Spotify-Dashboard",
-  },
-  {
-    image: "/caroussel/credit-card-fraud-results.webp",
-    alt: "F1 score comparison across credit card fraud detection models",
-    title: "Credit Card Fraud Detection",
-    link: "https://github.com/CodeOfGordon/credit-card-fraud",
-  },
-  {
-    image: "/caroussel/travel_therapy.png",
-    alt: "Travel Therapy",
-    title: "Travel Therapy",
-    link: "https://devpost.com/software/travel-therapy",
-  },
-  {
-    image: "/caroussel/Grow_RAG_helper_embed.drawio.png",
-    alt: "GoGrow Helper",
-    title: "GoGrow Helper",
-    link: "https://github.com/CodeOfGordon/grow_helper",
+    image: "/caroussel/Chess Project.png",
+    alt: "Chess Project",
+    title: "Chess Project",
+    link: "",
   },
   {
     image: "/caroussel/glassdoor.jpg",
@@ -30,10 +12,16 @@ export const projects = [
     link: "https://github.com/CodeOfGordon/ML-course-final-project",
   },
   {
-    image: "/caroussel/Categorizing_spotify_songs.png",
-    alt: "Categorizing Spotify Songs",
-    title: "Categorizing Spotify Songs",
-    link: "https://github.com/CodeOfGordon/Categorizing-spotify-songs",
+    image: "/caroussel/spotify-dashboard-cover.webp",
+    alt: "Spotify listening dashboard with song, artist, and streaming charts",
+    title: "Spotify Dashboard",
+    link: "https://github.com/CodeOfGordon/PowerBI-Spotify-Dashboard",
+  },
+  {
+    image: "/caroussel/dbt_sales.drawio.png",
+    alt: "Dbt-snowflake ELT pipeline",
+    title: "Dbt-snowflake ELT pipeline",
+    link: "https://github.com/CodeOfGordon/dbt_sales",
   },
   {
     image: "/caroussel/streaming-stock.png",
@@ -42,10 +30,22 @@ export const projects = [
     link: "https://github.com/CodeOfGordon/streaming-stock",
   },
   {
+    image: "/caroussel/credit-card-fraud-results.webp",
+    alt: "F1 score comparison across credit card fraud detection models",
+    title: "Credit Card Fraud Detection",
+    link: "https://github.com/CodeOfGordon/credit-card-fraud",
+  },
+  {
     image: "/caroussel/threeoneone.png",
     alt: "Three One One",
     title: "ThreeOneOne - Live Hazard Detection Map",
     link: "https://devpost.com/software/threeoneone-nrfyic",
+  },
+  {
+    image: "/caroussel/Grow_RAG_helper_embed.drawio.png",
+    alt: "GoGrow Helper",
+    title: "GoGrow Helper",
+    link: "https://github.com/CodeOfGordon/grow_helper",
   },
   {
     image: "/caroussel/CxC_submission.png",
@@ -60,16 +60,16 @@ export const projects = [
     link: "https://github.com/CodeOfGordon/Azure_Sales_Customer_Pipelining",
   },
   {
-    image: "/caroussel/dbt_sales.drawio.png",
-    alt: "Dbt-snowflake ELT pipeline",
-    title: "Dbt-snowflake ELT pipeline",
-    link: "https://github.com/CodeOfGordon/dbt_sales",
+    image: "/caroussel/Categorizing_spotify_songs.png",
+    alt: "Categorizing Spotify Songs",
+    title: "Categorizing Spotify Songs",
+    link: "https://github.com/CodeOfGordon/Categorizing-spotify-songs",
   },
   {
-    image: "/caroussel/Chess Project.png",
-    alt: "Chess Project",
-    title: "Chess Project",
-    link: "",
+    image: "/caroussel/travel_therapy.png",
+    alt: "Travel Therapy",
+    title: "Travel Therapy",
+    link: "https://devpost.com/software/travel-therapy",
   },
   {
     image: "/caroussel/wallpaper_playlist.png",
