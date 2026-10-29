@@ -36,7 +36,13 @@ export const projects = [
     link: "https://github.com/CodeOfGordon/grow_helper",
   },
   {
-    image: "/caroussel/threeoneone.png",
+    image: "/caroussel/bellhop.gif",
+    alt: "Bellhop, a nurse companion rover with an expressive face on its touchscreen",
+    title: "Bellhop - Nurse Companion Rover",
+    link: "https://devpost.com/software/bellhop",
+  },
+  {
+    image: "/caroussel/threeoneone.gif",
     alt: "Three One One",
     title: "ThreeOneOne - Live Hazard Detection Map",
     link: "https://devpost.com/software/threeoneone-nrfyic",
